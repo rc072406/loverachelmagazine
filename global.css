@@ -1,4 +1,4 @@
-:root {
+   :root {
             --teal: #008080;
             --pink: #e41e81;
             --light-pink: #facee2;
@@ -16,9 +16,8 @@
             background-color: var(--bg-white);
             font-family: 'Inter', sans-serif;
             color: #1a1a1a;
-            
             overflow-x: hidden;
-            min-height: 200vh; 
+            min-height: 100vh; 
         }
 
         /* --- HEADER & NAVIGATION --- */
@@ -27,134 +26,137 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 40px;
+            padding: 20px 5%; /* Flexible padding */
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center; /* Better for mobile alignment */
             z-index: 1000;
+            background: rgba(255, 255, 255, 0.9); /* Slight blur for readability */
+            backdrop-filter: blur(5px);
         }
 
-        .navbar { display: flex; gap: 30px; }
+        .navbar { display: flex; gap: 15px; } /* Tightened for mobile */
         .navbar a {
             text-decoration: none;
             color: #1a1a1a;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-weight: 500;
             transition: color 0.3s ease;
         }
-        /* Hover state: turns hot pink */
-.navbar a:hover {
-    color: var(--pink) !important;
-}
 
+        .navbar a:hover, .navbar a.active {
+            color: var(--pink) !important;
+        }
 
-.navbar a.active {
-    color: var(--pink);
-    
-    padding-bottom: 2px;
-}
-          
-        
- 
         .logo {
             font-family: 'Bodoni Moda', serif;
             font-weight: 900; 
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-size: clamp(1.2rem, 5vw, 2.5rem);
             color: var(--teal);
             line-height: 0.8;
             letter-spacing: -0.05em; 
+            text-align: right;
         }
 
-        /* --- MAIN CONTAINER (STAYS CENTERED) --- */
-        .site-container {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed; /* Keeps image centered while you scroll */
-            top: 0;
-            left: 0;
-            z-index: 5;
-        }
-
-        .magazine-cover {
+        /* --- CONTENT SECTION --- */
+        .about-section {
+            padding: 140px 5% 150px; /* Responsive padding */
+            max-width: 1200px;
+            margin: 0 auto;
             position: relative;
-            width: 90%;
-            max-width: 450px;
-            aspect-ratio: 3 / 4;
+            z-index: 10;
         }
 
-        .cover-img-wrapper {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            border: 1px solid var(--grid-color);
-        }
-
-        .founder-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: filter 0.8s ease;
-        }
-
-        .magazine-cover:hover .founder-img { filter: grayscale(0%); }
-
-        /* --- LEAKS --- */
-        .leak {
-            position: absolute;
+        .about-title {
             font-family: monospace;
-            font-size: 0.75rem;
+            font-size: clamp(2.5rem, 12vw, 7rem);
+            font-weight: 200;
+            color: var(--teal);
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            border-top: 1px solid var(--grid-color);
+            padding-top: 40px;
+        }
+
+        .grid-label {
+            font-family: monospace;
+            font-size: 0.6rem;
             color: var(--pink);
-            opacity: 0;
-            transition: 0.4s ease;
-            z-index: 20;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 4px 10px;
-            border: 1px solid var(--pink);
-            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
-        .magazine-cover:hover .leak { opacity: 1; }
-        .l1 { top: 15%; right: -50px; transform: rotate(5deg); }
-        .l2 { bottom: 25%; left: -80px; transform: rotate(-90deg); }
-        .l3 { bottom: -10px; right: 20px; }
 
-        /* --- METADATA --- */
-        .status-tag {
-            position: absolute;
-            bottom: 150px; 
-            left: 40px;
+        .vertical-line {
+            width: 1px;
+            height: 100px;
+            background-color: var(--pink);
+        }
+
+        .intro-text {
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            line-height: 1.4;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        .story-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Automatically stacks on mobile */
+            gap: 40px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* --- DECORATIVE ELEMENTS (HIDDEN ON SMALL MOBILE TO PREVENT OVERLAP) --- */
+        .status-tag, .side-date {
+            position: fixed;
             font-family: monospace;
-            font-size: 0.7rem;
+            z-index: 5;
+            pointer-events: none; /* Allows clicking items under them */
+        }
+
+        .status-tag {
+            bottom: 80px; 
+            left: 20px;
+            font-size: 0.6rem;
             color: var(--teal);
         }
 
         .side-date {
-            position: absolute;
-            bottom: 150px; 
-            right: 40px;
-            font-size: 0.6rem;
-            letter-spacing: 2px;
+            bottom: 80px; 
+            right: 20px;
+            font-size: 0.55rem;
+            letter-spacing: 1px;
             color: #666;
-            padding-right: 15px;
+            padding-right: 10px;
             border-right: 2px solid var(--pink);
             text-align: right;
         }
 
-        /* --- FOOTER & TICKER (FIXED TO BOTTOM) --- */
+        /* --- FOOTER & TICKER --- */
         .site-footer {
             position: fixed;
-            bottom: 40px; /* Sits right above ticker */
+            bottom: 35px;
             left: 0;
             width: 100%;
-            padding: 0 40px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: #999;
             text-transform: uppercase;
             z-index: 1100;
@@ -170,26 +172,31 @@
             background-color: var(--bg-white); 
             border-top: 1px solid var(--grid-color);
             z-index: 1200;
-            padding: 10px 0;
+            padding: 8px 0;
         }
 
         .ticker-content {
             display: flex;
             white-space: nowrap;
             font-family: monospace;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--pink); 
             text-transform: uppercase;
-            will-change: transform;
-           
-    white-space: nowrap;
-    animation: ticker 30s linear infinite;
+            animation: ticker 20s linear infinite;
         }
 
-        .ticker-content span { padding-right: 50px; }
-        
+        .ticker-content span { padding-right: 30px; }
 
         @keyframes ticker {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
+        }
+
+        /* --- MOBILE BREAKPOINTS --- */
+        @media (max-width: 600px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .grid-label { display: none; } /* Removes decorative line on tiny screens to save space */
+            .header-nav { padding: 15px 20px; }
+            .status-tag, .side-date { display: none; } /* Clean up view for small phones */
+            .about-section { padding-top: 100px; }
         }
