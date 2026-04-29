@@ -5,7 +5,7 @@ const buttonOverlay = document.getElementById('button-overlay');
 let bubbles = [];
 // Increased counts for the "flood" effect
 const decorativeCount = 120; 
-const stemSubjects = ['BIOLOGY', 'CHEMISTRY', 'CODING', 'PHYSICS', 'ENGINEERING', 'MATH', 'ROBOTICS', 'DESIGN', 'DATA', 'FASHION', 'CREATE', 'SPACE'];
+const stemSubjects = ['BIOLOGY', 'CHEMISTRY', 'CODING', 'PHYSICS', 'ENGINEERING', 'MATH', 'ROBOTICS', 'DESIGN', 'DATA', 'FASHION', 'CREATE', 'SPACE', 'BEAUTY'];
 const colors = ['#008080', '#e41e81', '#00cbcb', '#facee2'];
 
 function init() {
