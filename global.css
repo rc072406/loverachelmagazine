@@ -274,28 +274,41 @@
 .enter-archive-btn {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 160px;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--pink);
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 1px;
+    
+    /* The Container */
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 128, 128, 0.3); /* Thin teal border */
+    border-radius: 4px; /* Slight roundness, not a circle */
+    
+    /* The Typography */
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 11px;
+    line-height: 1.6;
     text-decoration: none;
-    z-index: 1000; /* Ensure it stays on top of the flood */
-    box-shadow: 0 0 30px rgba(228, 30, 129, 0.5);
-    border: none;
-    animation: pulse 3s infinite ease-in-out;
+    white-space: pre; /* Keeps the spacing/line breaks */
+    
+    /* Interactive */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
-@keyframes pulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 30px rgba(228, 30, 129, 0.5); }
-    50% { transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 0 50px rgba(228, 30, 129, 0.8); }
+.enter-archive-btn:hover {
+    background: rgba(228, 30, 129, 0.05);
+    border-color: #e41e81;
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+
+.code-tag { color: #008080; }    /* Teal */
+.code-attr { color: #e41e81; }   /* Pink */
+.code-string { color: #00cbcb; } /* Light Teal */
+.code-text { 
+    color: #1a1a1a; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
