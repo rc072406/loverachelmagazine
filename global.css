@@ -45,6 +45,7 @@ body {
     color: black; 
 }
 
+
 /* --- THE GRID --- */
 .magazine-grid {
     display: grid;
@@ -428,6 +429,16 @@ body {
     .letter-body {
         text-align: left;
     }
+    .logo {
+            
+            
+            font-size: clamp(1.2rem, 5vw, 2.5rem);
+
+            line-height: 0.8;
+            letter-spacing: -0.05em; 
+            text-align: right;
+        }
+
 }
         
 
