@@ -436,6 +436,11 @@ body {
             letter-spacing: -0.05em; 
             text-align: right;
         }
+    .toc-header {
+
+    font-size: 0.7rem;
+    
+}
 
 }
         
