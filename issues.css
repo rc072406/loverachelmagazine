@@ -88,10 +88,12 @@
     .cover-date {
         top: auto;
         bottom: 20px; 
-        right: 15px;
+        
         background: transparent;
         border-right: 2px solid #e41e81;
         padding-right: 8px;
+        right: 10px; 
+        font-size: 0.4rem
     }
 
     .masthead {
