@@ -1,0 +1,135 @@
+.magazine-section {
+    padding: 120px 4%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.magazine-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Image takes more weight */
+    gap: 60px;
+    align-items: center;
+    max-width: 1300px;
+    width: 100%;
+}
+
+
+.magazine-cover {
+    position: relative;
+    width: 70%;
+    aspect-ratio: 3 / 4; /* Classic magazine ratio */
+    background:white;
+    border: 1px solid var(--border-gray);
+    overflow: visible; /* To allow leaks to float outside */
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.magazine-cover:hover {
+    transform: scale(1.02);
+}
+
+.cover-img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.founder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+
+
+  .masthead {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 900; 
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: #008080;
+    z-index: 2;
+    text-align: center;
+    line-height: 0.8;
+    letter-spacing: -0.05em; 
+    pointer-events: none;
+    width: 100%;
+    text-transform: none;
+
+}
+
+.cover-date {
+    position: absolute;
+        
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    color: #facee2;
+    z-index: 3; 
+  
+    padding: 2px 5px;
+    top: auto;
+    bottom: 20px;     
+    right: 15px;
+    background: transparent;
+    border-right: 2px solid #e41e81;
+    padding-right: 8px;
+
+}
+
+/* Mobile Specific Fix for the Clashing */
+@media (max-width: 700px) {
+    .cover-date {
+        top: auto;
+        bottom: 20px; 
+        right: 15px;
+        background: transparent;
+        border-right: 2px solid #e41e81;
+        padding-right: 8px;
+    }
+
+    .masthead {
+        top: 5%; 
+        font-size: clamp(2rem, 1vw, 2rem);
+    }
+
+    /* Adjust leaks so they don't fly off-screen on narrow phones */
+    .l1 { right: 5px; top: 40%; }
+    .l2 { left: 5px; bottom: 20%; }
+}
+/* LEAKS ??*/
+.leak {
+    position: absolute;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: #e41e81;
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 10;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 8px;
+    pointer-events: none;
+}
+
+.magazine-cover:hover .leak { opacity: 1; }
+.l1 { top: 20%; right: -30px; transform: rotate(5deg); }
+.l2 { bottom: 30%; left: -40px; transform: rotate(-90deg); }
+.l3 { bottom: -20px; right: 20px; }
+ /* RESPONSIVE */
+@media (max-width: 900px) {
+    .magazine-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .magazine-cover {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+   
+}
