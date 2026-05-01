@@ -509,6 +509,43 @@
 /* Mobile fix for Full-Bleed */
 @media (max-width: 768px) {
     .spread-full .page {
-        height: 100vh;     /* Keeps it full screen even on mobile */
+        height: 100vh;     
+    }
+}
+.photobook-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    max-width: 100%;
+}
+
+/* The text style */
+.photo-annotation {
+    margin-top: 20px; /* Space between photo and text */
+    font-family: 'Inter', sans-serif;
+    color: #777; /* Soft grey */
+    max-width: 300px; 
+}
+
+.photo-label {
+    display: block;
+    font-weight: 700; 
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.photo-essay {
+    font-weight: 300; 
+    font-size: 0.75rem;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+
+@media (max-width: 768px) {
+    .photo-annotation {
+        padding: 0 10px;
     }
 }
