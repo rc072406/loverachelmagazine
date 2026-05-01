@@ -369,9 +369,13 @@
 .sidebar-bg {
     width: 100%;
     height: 100%;
+}
 
-    background-size: cover;
-  
+.sidebar-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the "magic" property for magazine layouts */
+    display: block;
 }
 
 .sidebar-caption {
