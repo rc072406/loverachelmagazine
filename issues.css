@@ -23,12 +23,10 @@
     background:white;
     border: 1px solid var(--border-gray);
     overflow: visible; /* To allow leaks to float outside */
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+   cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.magazine-cover:hover {
-    transform: scale(1.02);
-}
+
 
 .cover-img-wrapper {
     width: 100%;
