@@ -18,7 +18,7 @@
 
 .magazine-cover {
     position: relative;
-    width: 70%;
+    width: 100%;
     aspect-ratio: 3 / 4; /* Classic magazine ratio */
     background:white;
     border: 1px solid var(--border-gray);
