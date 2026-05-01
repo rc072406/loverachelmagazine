@@ -493,3 +493,22 @@
     .feature-content { width: 100%; padding: 60px 5%; }
     .feature-body { column-count: 1; }
 }
+/* --- FULL-BLEED OVERRIDE --- */
+.spread-full .page {
+    padding: 0 !important; 
+    height: 100vh;         
+}
+
+.spread-full img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;     /* Stretches/crops to fill the entire box */
+    max-width: none;       /* Allows it to go beyond natural size */
+}
+
+/* Mobile fix for Full-Bleed */
+@media (max-width: 768px) {
+    .spread-full .page {
+        height: 100vh;     /* Keeps it full screen even on mobile */
+    }
+}
