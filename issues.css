@@ -182,6 +182,7 @@
 .editorial-title {
    
     font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 500;
     line-height: 0.85;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
