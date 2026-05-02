@@ -122,16 +122,26 @@
 .l2 { bottom: 30%; left: -40px; transform: rotate(-90deg); }
 .l3 { bottom: -20px; right: 20px; }
  /* RESPONSIVE */
+
 @media (max-width: 900px) {
+    .magazine-section {
+        display: block; 
+    }
+
     .magazine-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .magazine-cover {
-        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers children horizontally */
         margin: 0 auto;
+        width: 100%;
     }
-   
+
+    .magazine-cover {
+        margin: 0 auto; /* Force the cover to the center */
+        width: 90%;     
+        max-width: 400px; 
+        left: 0;        /* Reset any potential shifts */
+    }
 }
 /* 1. General Spread Container (Stacks perfectly) */
 
@@ -634,3 +644,4 @@
         padding: 60px 10%;
     }
 }
+        
