@@ -783,4 +783,51 @@
         height: 70vh;
     }
 }
-        
+/* --- THE SPREAD BASE  FOR ASSYMETRY STYLE--- */
+.spread-container.photo-spread {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* This keeps them side-by-side */
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+/* --- LEFT SIDE: THE CARD --- */
+.page.style-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10% !important; /* This creates the "Frame" around the photo */
+    background: #ffffff;
+    position: relative;
+}
+
+.page.style-card img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* Gives it that "printed" depth */
+}
+
+/* --- RIGHT SIDE: THE FULL PIC --- */
+.page.style-bleed {
+    padding: 0 !important; 
+    position: relative;
+    overflow: hidden;
+}
+
+.page.style-bleed img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; 
+}
+
+/* --- MOBILE: STACK THEM --- */
+@media (max-width: 1024px) {
+    .spread-container.photo-spread {
+        grid-template-columns: 1fr; /* Stacks vertically on phones */
+    }
+    .page.style-bleed {
+        height: 70vh; 
+    }
+}
