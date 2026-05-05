@@ -669,13 +669,13 @@
 }
 
 .status-pill {
-    color: #008080; /* Your Teal */
+    color: #008080; 
     font-weight: bold;
 }
 
 .interview-main-title {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 4vw, 6.5rem);
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -0.04em;
@@ -694,7 +694,7 @@
     line-height: 1.5;
     color: #555;
     margin-bottom: 50px;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 /* Transcript Layout */
