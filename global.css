@@ -1,5 +1,4 @@
 :root {
-    --teal: #008080;
     --black: #000000;
     --grey: #777777;
     --light-grey: #e5e5e5;
@@ -338,7 +337,7 @@ body {
 .letter-header {
     display: flex;
     justify-content: space-between;
-    font-family: monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 0.7rem;
     line-height: 1.8;
     margin-bottom: 80px;
@@ -346,7 +345,7 @@ body {
 }
 
 .label {
-    color: var(--teal);
+    color: #49646F;
     font-weight: bold;
     margin-right: 10px;
 }
@@ -365,6 +364,7 @@ body {
     font-size: 1rem;
     margin-bottom: 30px;
     color: #000;
+    font-weight: 600;
 }
 
 .letter-body p {
