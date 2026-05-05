@@ -164,10 +164,11 @@ body {
 .ticker-content {
     display: flex;
     white-space: nowrap;
-    font-family: monospace;
-    font-size: 1rem;
+    font-family: 'firacode',monospace;
+    font-size: 14px;
     color: red;;
     text-transform: uppercase;
+    font-weight: 300;
     
 }
 
@@ -198,12 +199,7 @@ body {
             pointer-events: none; 
         }
 
-        .status-tag {
-            bottom: 80px; 
-            left: 20px;
-            font-size: 0.6rem;
-            color: var(--teal);
-        }
+       
 
         .side-date {
             bottom: 80px; 
