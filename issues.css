@@ -85,9 +85,7 @@
     .cover-date {
         top: auto;
         bottom: 20px; 
-        
-        background: transparent;
-        border-right: 2px solid #e41e81;
+         background: transparent;
         padding-right: 8px;
         right: 10px; 
         font-size: 0.4rem
