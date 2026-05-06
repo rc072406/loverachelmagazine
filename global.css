@@ -163,9 +163,9 @@ body {
 .ticker-content {
     display: flex;
     white-space: nowrap;
-    font-family: 'firacode',monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 14px;
-    color: red;;
+    color: red;
     text-transform: uppercase;
     font-weight: 300;
     
