@@ -216,12 +216,6 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
 }
 
-@media (max-width: 768px) {
-    .photo-spread .page {
-        padding: 40px 20px;
-        min-height: 60vh; /* Stacks tighter on mobile */
-    }
-}
 
 
 @media (max-width: 768px) {
@@ -351,7 +345,6 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
-    text-transform: uppercase;
     letter-spacing: -0.02em;
     line-height: 1;
     margin-bottom: 8px;
