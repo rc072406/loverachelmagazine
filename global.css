@@ -290,7 +290,7 @@ body {
 
     font-size: 0.85rem;
 
-    color: #888888 !important;
+    color: #888888 ;
 
     max-width: 320px;
 
@@ -836,7 +836,9 @@ body {
 
     max-width: 1300px;
 
-    margin: 0 auto;
+    
+    margin: 0 auto 0 var(--nav-width); /* Adds margin-left on desktop */
+    padding: 60px 5%;
 
 }
 
@@ -1170,5 +1172,11 @@ body {
     }
     .tape-inner {
         font-size: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .content-wrapper {
+        margin-left: 0;
+        padding-top: 40px;
     }
 }
