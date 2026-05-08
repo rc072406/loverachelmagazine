@@ -96,28 +96,7 @@
         font-size: clamp(2rem, 1vw, 2rem);
     }
 
-    /* Adjust leaks so they don't fly off-screen on narrow phones */
-    .l1 { right: 5px; top: 40%; }
-    .l2 { left: 5px; bottom: 20%; }
-}
-/* LEAKS ??*/
-.leak {
-    position: absolute;
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: #e41e81;
-    opacity: 0;
-    transition: 0.4s ease;
-    z-index: 10;
-    background: rgba(0,0,0,0.6);
-    padding: 4px 8px;
-    pointer-events: none;
-}
-
-.magazine-cover:hover .leak { opacity: 1; }
-.l1 { top: 20%; right: -30px; transform: rotate(5deg); }
-.l2 { bottom: 30%; left: -40px; transform: rotate(-90deg); }
-.l3 { bottom: -20px; right: 20px; }
+    
  /* RESPONSIVE */
 
 @media (max-width: 900px) {
