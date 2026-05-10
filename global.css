@@ -445,7 +445,7 @@ section {
 }
 /* --- EMAIL / INBOX AREA --- */
 .email-wrapper {
-    background-color: #000; 
+    background-color: #000; /* Back to black */
     padding: 100px 5%;
     display: flex;
     justify-content: center;
@@ -454,15 +454,15 @@ section {
 .email-container {
     width: 100%;
     max-width: 800px;
-    background: #fff; 
+    background: #fff; /* High-fashion white card */
     color: #000;
     padding: 40px;
     border-radius: 2px;
-    font-family: var(--inter); 
-    box-shadow: 20px 20px 0px var(--accent); 
+    font-family: var(--inter); /* strictly Inter */
+    box-shadow: 20px 20px 0px var(--accent); /* brutalist shadow */
 }
 
-
+/* Technical Header */
 .email-meta {
     border-bottom: 1px solid #ddd;
     padding-bottom: 30px;
@@ -586,4 +586,108 @@ section {
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+/* --- ABOUT SECTION STYLES --- */
+.about-section {
+    position: relative;
+    padding: 150px 5%;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    overflow: hidden; 
+    
+}
+
+
+
+
+/* Main Title */
+.about-title {
+    font-family: var(--inter);
+    font-weight: 900;
+    font-size: clamp(2rem, 8vw, 6rem);
+    letter-spacing: -2px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Asymmetrical Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.grid-label {
+    font-family: var(--fira);
+    font-size: 12px;
+    writing-mode: vertical-rl; 
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    color: var(--accent);
+}
+
+.vertical-line {
+    width: 1px;
+    height: 100px;
+    background: var(--accent);
+    margin-top: 20px;
+}
+
+/* Content Area */
+.about-content {
+    max-width: 900px;
+}
+
+.intro-text {
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+}
+
+
+.story-columns {
+    column-count: 2; 
+    column-gap: 60px;
+    font-family: var(--inter);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: justify;
+}
+
+.story-columns p {
+    margin-bottom: 20px;
+}
+
+/* MOBILE  */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-label {
+        writing-mode: horizontal-tb;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+    
+    .vertical-line {
+        width: 50px;
+        height: 1px;
+        margin: 0 0 0 20px;
+    }
+
+    .story-columns {
+        column-count: 1; 
+    }
+    
+    
 }
