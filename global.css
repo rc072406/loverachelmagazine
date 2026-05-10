@@ -586,6 +586,9 @@ section {
     
     animation: blink 1.5s infinite;
 }
+.press-alert {
+    animation: blink 1.5s infinite;
+}
 
 @keyframes blink {
     50% { opacity: 0; }
