@@ -1,3 +1,380 @@
+:root {
+
+    --black: #000000;
+
+    --grey: #777777;
+
+    --light-grey: #e5e5e5;
+
+    --bg: #ffffff;
+
+    font-family: Inter, sans-serif;
+
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+
+}
+
+@supports (font-variation-settings: normal) {
+
+  :root { font-family: InterVariable, sans-serif; }
+
+}
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    background-color: var(--bg);
+
+    font-family: 'Inter', sans-serif;
+
+    color: var(--black);
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+
+/* --- HEADER & LOGO --- */
+
+.header-nav {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    padding: 40px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+
+.logo {
+
+    font-family: 'Bodoni Moda', serif;
+
+    font-weight: 900;
+
+    font-size: 2.2rem;
+
+    letter-spacing: -0.05em;
+
+}
+
+
+
+.logo a {
+
+    text-decoration: none;
+
+    color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hide Mobile Elements on Desktop */
+
+.mobile-header, .menu-close {
+
+    display: none;
+
+}
+
+
+
+
+
+    .mobile-header {
+
+        display: flex;
+
+        position: fixed;
+
+        top: 0;
+
+        width: 100%;
+
+        padding: 20px 5%;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        background: #fff;
+
+        z-index: 1500;
+
+        border-bottom: 1px solid var(--light-grey);
+
+    }
+
+
+
+    
+
+
+
+    .nav-header {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+ .status-tag, .side-date {
+
+            position: fixed;
+
+            font-family: monospace;
+
+            z-index: 5;
+
+            pointer-events: none;
+
+        }
+
+
+
+       
+
+
+
+        .side-date {
+
+            bottom: 80px;
+
+            right: 20px;
+
+            font-size: 0.55rem;
+
+            letter-spacing: 1px;
+
+            color: #666;
+
+            padding-right: 10px;
+
+            border-right: 2px solid var(--pink);
+
+            text-align: right;
+
+        }
+
+        /* HIDE ON MOBILE */
+
+@media (max-width: 768px) {
+
+    .status-tag, .side-date {
+
+        display: none;
+
+    }
+
+}
+
+.about-section {
+
+            padding: 140px 5% 150px; /* Responsive padding */
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            position: relative;
+
+            z-index: 10;
+
+        }
+
+
+
+        .about-title {
+
+            display: flex;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #000;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 60px;
+
+    letter-spacing: 2px;
+
+   
+
+        }
+
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 60px 1fr;
+
+            gap: 20px;
+
+            border-top: 1px solid var(--grid-color);
+
+            padding-top: 40px;
+
+        }
+
+
+
+        .grid-label {
+
+            font-family: monospace;
+
+            font-size: 0.6rem;
+
+            color: var(--pink);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+
+
+
+        .intro-text {
+
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
+
+            line-height: 1.4;
+
+            font-weight: 500;
+
+            margin-bottom: 40px;
+
+            color: #1a1a1a;
+
+        }
+
+
+
+        .story-columns {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Automatically stacks on mobile */
+
+            gap: 40px;
+
+            font-size: 0.9rem;
+
+            line-height: 1.8;
+
+            color: #555;
+
+        }
+
+
+
+
+.action-btn:hover {
+
+    opacity: 0.6;
+
+    text-decoration: underline;
+
+}
+
+
+
+/* Mobile Adjustments */
+
+@media (max-width: 600px) {
+
+
+
+    .logo {
+
+           
+
+           
+
+            font-size: clamp(1.2rem, 5vw, 2.5rem);
+
+
+
+            line-height: 0.8;
+
+            letter-spacing: -0.05em;
+
+            text-align: right;
+
+        }
+
+ 
+
+
+
+
 .magazine-section {
     padding: 120px 4%;
     background: white;
