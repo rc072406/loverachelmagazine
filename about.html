@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT | love, RACHEL</title>
+    <title>ABOUT | love, RACHEL | FASHION AND STEM MAGAZINE</title>
      <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,900&family=Fira+Code:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-   <link rel="stylesheet" href="global.css">
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-
-   <nav class="side-navigation" id="sideNav">
+<nav class="side-navigation" id="sideNav">
     <div class="nav-header">
         <div class="logo"><a href="index.html">love, RACHEL</a></div>
         <button class="menu-close" onclick="toggleMenu()">✕</button>
@@ -30,7 +29,7 @@
                 <div class="toc-content">
                     <span class="toc-link">About</span>
                     <p>Architecting a new visual language for women in STEM.</p>
-                    <p style="color:black; font-family: monospace;">Where are you?</p>
+                     <p class="nav-alert">Where are you?</p>
                 </div>
             </a>
 
@@ -47,7 +46,7 @@
                 <div class="toc-content">
                     <span class="toc-link">Contact</span>
                     <p>Join the collective. How to contribute your voice.</p>
-                    
+                   
                 </div>
             </a>
         </nav>
@@ -61,58 +60,78 @@
         <span></span>
     </button>
 </header>
-<div class="magazine-grid">
-    <section class="tape-container">
-        <div class="police-tape tape-1">
-            <div class="tape-inner" >
-                <span>ABOUT THE COLLECTIVE // </span>
-                <span>ABOUT THE COLLECTIVE // </span>
-                <span>ABOUT THE COLLECTIVE // </span>
-                <span>ABOUT THE COLLECTIVE // </span>
-                <span>ABOUT THE COLLECTIVE // </span>
-                <span>ABOUT THE COLLECTIVE // </span>
-                
+<section class="hero-section">
+    <div class="hero-row">
+        <div class="marquee">
+            <div class="track">
+                <span>CONTACT // </span>
+                <span>CONTACT // </span>
+                <span>CONTACT // </span>
+                <span>CONTACT// </span>
             </div>
         </div>
+    </div>
+    
+    <div class="hero-row ghost-row">
+        <div class="marquee reverse">
+            <div class="track">
+                <span>WHERE ARE YOU? // </span>
+                <span>WHERE ARE YOU?  // </span>
+                <span>WHERE ARE YOU?  // </span>
+                <span>WHERE ARE YOU?  // </span>
+            </div>
+        </div>
+    </div>
+</section>
+                    
+  
 
-        <div class="police-tape tape-2">
-            <div class="tape-inner" style="animation-direction: reverse;">
-                <span>WHERE ARE YOU? // </span>
-                <span>WHERE ARE YOU? // </span>
-                <span>WHERE ARE YOU? // </span>
-                <span>WHERE ARE YOU? // </span>
-                <span>WHERE ARE YOU? // </span>
-                <span>WHERE ARE YOU? // </span>
-            </div>
-        </div>
-    </section>
-</div>
+<header class="mobile-header">
+    <div class="logo"><a href="index.html">love, RACHEL</a></div>
+    <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+  
 
     
+<main class="about-section">
+   
 
-    <main class="pabout-section">
-        <h1 class="pabout-title">THE STORY // 072406</h1>
+    <h1 class="about-title">THE STORY // 072406</h1>
 
-        <div class="pabout-grid">
-            <div class="pgrid-label">
-                <span>EST. 2026</span>
-            </div>
-
-            <article class="pabout-content">
-                <p class="pintro-text">
-                    love, RACHEL is a digital (and hopefully one day printed) magazine where girls in STEM meet the tactile world of high-fashion editorial. 
-                </p>
-                <div class="pstory-columns">
-                    <p>
-                        Born from the intersection of code and creative expression, this project explores what it means to be a girl in STEM in the modern age. We believe that traditionally male dominated fields and feminine beauty aren't opposites, but are the same language.
-                    </p>
-                    <p>
-                        Every issue, made strictly with html and cascading style sheets, is a deep dive into girls who are changing the game, documenting the journey of building something from 0 to 100. This isn't your average fashion magazine; it's the stories of all the inspiring and amazing girls in STEM.. 
-                    </p>
-                </div>
-            </article>
+    <div class="about-grid">
+        <div class="grid-label">
+            <span>EST. 2026</span>
+            <div class="vertical-line"></div>
         </div>
-    </main>
+
+        <article class="about-content">
+            <p class="intro-text">
+                love, RACHEL is a digital (and hopefully one day printed) magazine where girls in STEM meet the tactile world of high-fashion editorial. 
+            </p>
+            <div class="story-columns">
+                <p>
+                    Born from the intersection of code and creative expression, this project explores what it means to be a girl in STEM in the modern age. We believe that traditionally male dominated fields and feminine beauty aren't opposites, but are the same language.
+                </p>
+                <p>
+                    Every issue, made strictly with html and cascading style sheets, is a deep dive into girls who are changing the game, documenting the journey of building something from 0 to 100. This isn't your average fashion magazine; it's the stories of all the inspiring and amazing girls in STEM.
+                </p>
+            </div>
+        </article>
+    </div>
+</main>
+ <section class="chaos-footer">
+    <div class="stack-container">
+        <h2 class="stack-text outline slide-left">ISSUE NO.01 COMING SOON</h2>
+        <h2 class="stack-text solid">// ISSUE NO.01 COMING</h2>
+        <h2 class="stack-text outline-faded slide-right">SOON // ISSUE NO.01 //</h2>
+        <h2 class="stack-text solid-overlap">COMING SOON // ISSUE //</h2>
+        <h2 class="stack-text outline-bold">NO.01 COMING SOON // //</h2>
+    </div>
+</section>
 <div class="ticker-wrap">
         <div class="ticker-content">
             <span>© love, RACHEL 2026.——EMAIL:N/A——@loverachel——7-24-06——EMAIL:N/A——EMAIL:N/A——@loverachel——7-24-06——EMAIL:N/A——EMAIL:N/A——@loverachel——7-24-06——DESIGN BY: RACHEL C——EMAIL:N/A——@loverachel——7-24-06——EMAIL:N/A</span>
