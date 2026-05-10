@@ -446,135 +446,94 @@ section {
     z-index: 100 !important;
     transform: scale(1.05) translateY(-30px) !important;
 }
-/* --- EMAIL / INBOX AREA --- */
-.email-wrapper {
-    background-color: #000; /* Back to black */
-    padding: 100px 5%;
+/* ---RECEIPT SYSTEM --- */
+.receipt-area {
+    min-height: 120vh; 
     display: flex;
     justify-content: center;
-}
-
-.email-container {
-    width: 100%;
-    max-width: 800px;
-    background: #fff; /* High-fashion white card */
-    color: #000;
-    padding: 40px;
-    border-radius: 2px;
-    font-family: var(--inter); /* strictly Inter */
-    box-shadow: 20px 20px 0px var(--accent); /* brutalist shadow */
-}
-
-/* Technical Header */
-.email-meta {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 30px;
-    margin-bottom: 40px;
-}
-
-.meta-row {
-    display: flex;
-    font-size: 11px;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.meta-label {
-    width: 80px;
-    font-weight: 800;
-    color: #999;
-}
-
-.meta-value {
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.date-loc {
-    margin-top: 20px;
-    font-size: 9px;
-    color: var(--accent);
-    justify-content: space-between;
-    font-weight: 700;
-}
-
-/* Text Body */
-.email-content {
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.greeting {
-    font-weight: 800;
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    letter-spacing: -0.5px;
-}
-
-.email-content p {
-    margin-bottom: 25px;
-}
-
-/* Bottom Bar */
-.email-actions {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #ddd;
-    padding-top: 30px;
-}
-
-.reply-btn {
     background: #000;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 12px;
-    transition: 0.3s;
+    padding: 150px 20px;
 }
 
-.reply-btn:hover {
-    background: var(--accent);
+.receipt-stack {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 600px; 
+    cursor: pointer;
 }
 
-.status-indicator {
-    font-size: 10px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.blink-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; }
-    100% { opacity: 1; }
-}
-
-/* Mobile Tweak */
-@media (max-width: 600px) {
-    .email-container { padding: 20px; }
-    .email-actions { flex-direction: column; gap: 20px; align-items: flex-start; }
-}
-.email-signature {
-    font-family: var(--bodoni);
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-top: 50px;
-    letter-spacing: -2px;
-    line-height: 1;
+.receipt {
+    position: absolute;
+    width: 100%;
+    background: #e0e0e0; 
     color: #000;
+    padding: 35px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    border-bottom: 3px dashed #bbb;
+}
+
+/* Back Receipt - Hidden behind */
+.receipt-back {
+    z-index: 1;
+    transform: rotate(1deg) scale(0.95);
+    background: #d1d1d1;
+    top: 0;
+}
+
+/* Front Receipt - Main view */
+.receipt-front {
+    z-index: 5;
+    transform: rotate(-1.5deg);
+    top: 0;
+}
+
+/* --- THE REVEAL TRANSFORMATION --- */
+.receipt-stack:hover .receipt-front {
+    
+    transform: translateY(70%) rotate(2deg); 
+    opacity: 0.3;
+}
+
+.receipt-stack:hover .receipt-back {
    
+    transform: translateY(-50%) rotate(-1deg) scale(1);
+    background: #ffffff;
+    z-index: 10; /* Brings it to the very top */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+/* Typography Tweaks */
+.receipt-title {
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px;
+}
+
+.receipt-footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 10px;
+    border-top: 1px dashed #000;
+    padding-top: 15px;
+}
+
+
+@media (max-width: 600px) {
+    .receipt-stack:hover .receipt-front {
+        transform: translateY(80%) rotate(0deg);
+    }
+    .receipt-stack:hover .receipt-back {
+        transform: translateY(-60%) rotate(0deg);
+    }
 }
 .nav-alert {
     color: var(--accent);
