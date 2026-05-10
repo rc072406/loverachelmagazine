@@ -19,9 +19,6 @@
   :root { font-family: InterVariable, sans-serif; }
 
 }
-
-
-
 * {
 
     margin: 0;
@@ -45,188 +42,6 @@ body {
     -webkit-font-smoothing: antialiased;
 
 }
-
-
-
-/* --- HEADER & LOGO --- */
-
-.header-nav {
-
-    position: fixed;
-
-    top: 0;
-
-    width: 100%;
-
-    padding: 40px 5%;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    z-index: 1000;
-
-    background: rgba(255, 255, 255, 0.8);
-
-    backdrop-filter: blur(10px);
-
-}
-
-
-
-.logo {
-
-    font-family: 'Bodoni Moda', serif;
-
-    font-weight: 900;
-
-    font-size: 2.2rem;
-
-    letter-spacing: -0.05em;
-
-}
-
-
-
-.logo a {
-
-    text-decoration: none;
-
-    color: black;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Hide Mobile Elements on Desktop */
-
-.mobile-header, .menu-close {
-
-    display: none;
-
-}
-
-
-
-
-
-    .mobile-header {
-
-        display: flex;
-
-        position: fixed;
-
-        top: 0;
-
-        width: 100%;
-
-        padding: 20px 5%;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        background: #fff;
-
-        z-index: 1500;
-
-        border-bottom: 1px solid var(--light-grey);
-
-    }
-
-
-
-    
-
-
-
-    .nav-header {
-
-        display: flex;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        margin-bottom: 40px;
-
-    }
-
-
-
-
-
-
-
-
-
-
-
- .status-tag, .side-date {
-
-            position: fixed;
-
-            font-family: monospace;
-
-            z-index: 5;
-
-            pointer-events: none;
-
-        }
-
-
-
-       
-
-
-
-        .side-date {
-
-            bottom: 80px;
-
-            right: 20px;
-
-            font-size: 0.55rem;
-
-            letter-spacing: 1px;
-
-            color: #666;
-
-            padding-right: 10px;
-
-            border-right: 2px solid var(--pink);
-
-            text-align: right;
-
-        }
-
-        /* HIDE ON MOBILE */
-
-@media (max-width: 768px) {
-
-    .status-tag, .side-date {
-
-        display: none;
-
-    }
-
-}
-
 .about-section {
 
             padding: 140px 5% 150px; /* Responsive padding */
@@ -346,29 +161,56 @@ body {
 
 
 
-/* Mobile Adjustments */
+/* --- HEADER & LOGO --- */
 
-@media (max-width: 600px) {
+.header-nav {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    padding: 20px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+}
 
 
 
-    .logo {
+.logo {
 
-           
+    font-family: 'Bodoni Moda', serif;
 
-           
+    font-weight: 900;
 
-            font-size: clamp(1.2rem, 5vw, 2.5rem);
+font-size: clamp(1.2rem, 5vw, 2.5rem);
+
+    letter-spacing: -0.05em;
+
+}
 
 
 
-            line-height: 0.8;
 
-            letter-spacing: -0.05em;
+.logo a {
 
-            text-align: right;
+    text-decoration: none;
 
-        }
+    color: black;
+
+}
 
  
 
