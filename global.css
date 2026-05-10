@@ -101,12 +101,18 @@ body {
 }
 
 .toc-link {
-    font-family: var(--bodoni);
-    font-size: clamp(2.5rem, 8vw, 5rem); /* Auto-sizes for screen */
+    font-family: 'Inter', sans-serif ;
+    font-size: clamp(2.5rem, 8vw, 5rem); 
     line-height: 0.9;
     text-transform: uppercase;
     color: #fff;
+    text-decoration: none; 
+  
+    display:block; 
+}
+a {
     text-decoration: none;
+    color: inherit;
 }
 
 /* --- SECTION STABILIZER --- */
