@@ -2,47 +2,50 @@ function toggleMenu() {
     const nav = document.getElementById('sideNav');
     nav.classList.toggle('active');
 }
-const typingTarget = document.getElementById("typed-text");
-const phrases = [
-    "Falling in love.",
-    "One story at a time.",
-    "One picture at a time.",
-    "One page at a time.",
-    
-];
+class TypeWriter {
+    constructor(element, phrases, waitTime = 2000) {
+        this.element = element;
+        this.phrases = phrases;
+        this.waitTime = waitTime;
+        this.phraseIndex = 0;
+        this.charIndex = 0;
+        this.isDeleting = false;
+        this.type();
+    }
 
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typeSpeed = 100;
-
-function type() {
-    const currentPhrase = phrases[phraseIndex];
-    
-    if (isDeleting) {
-        // Remove characters
-        typingTarget.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-        typeSpeed = 50; 
-    } else {
+    type() {
+        const currentPhrase = this.phrases[this.phraseIndex];
        
-        typingTarget.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-        typeSpeed = 100;
-    }
+        let typeSpeed = this.isDeleting ? 50 : 100;
 
-    // Logic for switching states
-    if (!isDeleting && charIndex === currentPhrase.length) {
-        // Pause at the end of a string
-        isDeleting = true;
-        typeSpeed = 2000; 
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length; 
-        typeSpeed = 500;
-    }
+        if (this.isDeleting) {
+            this.element.textContent = currentPhrase.substring(0, this.charIndex - 1);
+            this.charIndex--;
+        } else {
+            this.element.textContent = currentPhrase.substring(0, this.charIndex + 1);
+            this.charIndex++;
+        }
 
-    setTimeout(type, typeSpeed);
+        
+        if (!this.isDeleting && this.charIndex === currentPhrase.length) {
+            this.isDeleting = true;
+            typeSpeed = this.waitTime; // Pause at the end
+        } else if (this.isDeleting && this.charIndex === 0) {
+            this.isDeleting = false;
+            this.phraseIndex = (this.phraseIndex + 1) % this.phrases.length;
+            typeSpeed = 500; // Small pause before starting new word
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+    }
 }
 
-document.addEventListener("DOMContentLoaded", type);
+// Initialization Logic
+document.addEventListener("DOMContentLoaded", () => {
+    const typewriters = document.querySelectorAll(".typewriter");
+    typewriters.forEach(el => {
+      
+        const phrases = JSON.parse(el.getAttribute("data-phrases"));
+        new TypeWriter(el, phrases);
+    });
+});
