@@ -153,8 +153,8 @@ section {
     min-height: 250px;
 }
 .cursor {
-    color: var(--accent);
-    font-weight: 900;
+    color: white;
+    font-weight: 300;
     margin-left: 5px;
     animation: blink 0.8s step-end infinite;
 }
