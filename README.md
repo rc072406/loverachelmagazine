@@ -1,0 +1,1 @@
+This was the old html, css, and js code for the love, Rachel magazine. This is now defunct and shows the early stages of the magazine but you are free to check out the code :). Rachel's tech stack includes Astro and has migrated this to Astro. 
