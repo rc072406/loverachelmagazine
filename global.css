@@ -152,6 +152,17 @@ section {
     font-size: clamp(1.2rem, 3vw, 2rem);
     min-height: 250px;
 }
+.cursor {
+    color: var(--accent);
+    font-weight: 900;
+    margin-left: 5px;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
 
 /* --- DATABASE SECTION --- */
 .database-section {
