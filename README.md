@@ -1,2 +1,2 @@
 This was the old html, css, and js code for the love, Rachel magazine. This is now defunct and shows the early stages of the magazine but you are free to check out the code :). Rachel's tech stack now includes Astro and has migrated this to Astro. 
-If anything, this repository is mostly used for testing purposes for upcoming issues (think of it as a crash dummy). Thank you for checking out my art :) 
+If anything, this repository is mostly used for testing purposes for upcoming issues (think of it as a crash dummy). Thank you for checking out my art :) - R.C. 5/11/2026
