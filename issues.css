@@ -571,7 +571,7 @@ font-size: clamp(1.2rem, 5vw, 2.5rem);
 
 /* Fixed Sidebar */
 .feature-sidebar {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     position: sticky; 
     top: 0;
