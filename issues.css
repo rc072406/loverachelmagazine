@@ -562,47 +562,58 @@ font-size: clamp(1.2rem, 5vw, 2.5rem);
     color: var(--grey);
     margin-top: 60px;
 }
-/* --- FEATURE LAYOUT TYPE: SPLIT --- */
+/* --- UPDATED FEATURE LAYOUT: FULL BLEED LEFT --- */
 .feature-layout-split {
     display: flex;
     min-height: 100vh;
-    background: #fff;
+    width: 100%;
+    
 }
 
-/* Fixed Sidebar */
+/* Left Side: Now a Full Bleed Spread Page */
 .feature-sidebar {
-    width: 100%;
+    flex: 1;
     height: 100vh;
     position: sticky; 
     top: 0;
+    padding: 0;
     overflow: hidden;
+}
+
+.sidebar-bg {
+    width: 100%;
+    height: 100%;
 }
 
 .sidebar-bg img {
     width: 100%;
     height: 100%;
-    background-size: cover;
+    object-fit: cover; 
     display: block;
 }
 
-
-.sidebar-caption {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    color: #fff;
-    font-family: monospace;
-    font-size: 0.6rem;
-    letter-spacing: 2px;
-    mix-blend-mode: difference;
-}
-
-/* Scrolling Content */
+/* Right Side: The Scrolling Content */
 .feature-content {
-    width: 50%;
+    flex: 1; /* Takes up the other 50% */
     padding: 120px 0;
-    color: #000;
+    background: #fff;
 }
+
+/* Mobile: Stack them back to normal */
+@media (max-width: 1024px) {
+    .feature-layout-split {
+        flex-direction: column;
+    }
+    .feature-sidebar {
+        height: 70vh; 
+        position: relative;
+    }
+    .feature-content {
+        width: 100%;
+        padding: 60px 5%;
+    }
+}
+
 
 .feature-header {
     padding: 0 10% 40px;
@@ -678,7 +689,6 @@ font-size: clamp(1.2rem, 5vw, 2.5rem);
 /* Tablet/Mobile Response */
 @media (max-width: 1024px) {
     .feature-layout-split { flex-direction: column; }
-    .feature-sidebar { width: 100%; height: 50vh; position: relative; }
     .feature-content { width: 100%; padding: 60px 5%; }
     .feature-body { column-count: 1; }
 }
