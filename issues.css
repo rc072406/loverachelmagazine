@@ -578,11 +578,13 @@ font-size: clamp(1.2rem, 5vw, 2.5rem);
     overflow: hidden;
 }
 
-.sidebar-bg {
+.sidebar-bg img {
     width: 100%;
     height: 100%;
     background-size: cover;
+    display: block;
 }
+
 
 .sidebar-caption {
     position: absolute;
