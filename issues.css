@@ -576,7 +576,6 @@ font-size: clamp(1.2rem, 5vw, 2.5rem);
     position: sticky; 
     top: 0;
     overflow: hidden;
-    background: #000;
 }
 
 .sidebar-bg {
